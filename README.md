@@ -1,6 +1,6 @@
 # 🎮 RAWG API – Prueba Técnica
 
-Este proyecto es una respuesta a una prueba técnica para una posición de desarrollador front-end.
+Este proyecto es una respuesta a una prueba técnica para una posición de desarrollador fullstack.
 
 ## 🚀 Stack Tecnológico
 
@@ -44,7 +44,7 @@ Puedes ver la demo en vivo de la aplicación [aquí](https://rawg-api-tt.vercel.
 
 # 🎮 RAWG API – Technical Test
 
-This project is a response to a technical test for a front-end developer position.
+This project is a response to a technical test for a fullstack developer position.
 
 ## 🚀 Tech Stack
 
