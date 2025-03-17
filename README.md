@@ -16,6 +16,7 @@ Este proyecto es una respuesta a una prueba técnica para una posición de desar
 | **he**               | Para decodificar entidades HTML en descripciones provenientes de la API.          |
 | **React Hot Toast**  | Para mostrar notificaciones no intrusivas al usuario, mejorando la UX.            |
 | **React Router DOM** | Para manejar la navegación entre vistas en una SPA sin recarga de página.         |
+| **Zustand**          | Para centralizar el uso del estado de filtros y fetch de datos en la aplicación.  |
 
 ## 📂 Estructura del Proyecto
 
@@ -60,6 +61,7 @@ This project is a response to a technical test for a fullstack developer positio
 | **he**               | Decodes HTML entities from game descriptions returned by the API.      |
 | **React Hot Toast**  | Displays non-intrusive user notifications to improve UX.               |
 | **React Router DOM** | Handles navigation between views in the SPA without full page reloads. |
+| **Zustand**          | Handles state centralization for filter and fetching data purposes.    |
 
 ## 📂 Project Structure
 
