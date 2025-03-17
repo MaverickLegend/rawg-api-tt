@@ -1,0 +1,133 @@
+@use '../../styles/mixins'as *;
+
+.game-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    h1 {
+        margin: 1rem;
+    }
+
+    @media (max-width: 1200px) {
+        width: 80%;
+        height: 100vh;
+        padding: 1rem;
+    }
+
+    .game-list-header {
+        max-width: 1200px;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .game-filters {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+
+
+        .filters-list {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .filter-tag {
+            background-color: var(--accent-blue);
+            color: white;
+            border-radius: 16px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+    }
+
+    .game-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: auto;
+        gap: 1rem;
+        list-style: none;
+        width: 100%;
+        max-width: 1200px;
+        max-height: 600px;
+        overflow-y: auto;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+        }
+
+
+        li {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: 1fr;
+            background-color: var(--glass-bg);
+            border: 1px solid var(--accent-purple);
+            padding: 0.5rem 1rem;
+            min-height: 3rem;
+            overflow: hidden;
+
+            @media (max-width: 768px) {
+                gap: 0.5rem;
+                padding: 0.5rem;
+
+            }
+
+            h5 {
+                margin-right: 1rem;
+                white-space: nowrap;
+            }
+
+            .game-info {
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                min-width: 0;
+
+                h4 {
+                    color: var(--accent-blue);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                p {
+                    padding-top: 0.5rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1rem;
+
+        span {
+            align-self: center;
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+        }
+    }
+}

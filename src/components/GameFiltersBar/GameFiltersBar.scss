@@ -1,0 +1,53 @@
+    form {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1rem;
+        padding: 0.5rem;
+        background-color: var(--glass-bg);
+        border: 1px solid var(--accent-purple);
+        margin-bottom: 1rem;
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        @media (max-width: 1200px) {
+            flex-flow: column wrap;
+
+            .input-group {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+
+                label {
+                    display: grid;
+                }
+            }
+
+            .button-group {
+                justify-content: center;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .input-group {
+                max-height: 100px;
+                gap: 0.5rem;
+                grid-template-columns: 1fr;
+                overflow-y: auto;
+                margin: 0.5rem;
+            }
+
+            .button-group {
+                gap: 0.5rem;
+            }
+        }
+    }

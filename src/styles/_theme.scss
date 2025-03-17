@@ -1,0 +1,35 @@
+:root {
+    /* Color Palette */
+    --accent-teal: #64E0B9;
+    --accent-blue: #7CB4DD;
+    --accent-purple: #9B8AD4;
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-text: rgba(255, 255, 255, 0.88);
+    --glass-blur: 12px;
+
+    /* Shadow */
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    /* Text */
+    --text: #ffffff;
+}
+
+.glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--shadow);
+}
+
+.card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    color: var(--glass-text);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}

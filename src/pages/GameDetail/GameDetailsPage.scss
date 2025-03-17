@@ -1,0 +1,134 @@
+@use '../../styles/theme.scss'as *;
+
+.game-details-container {
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    margin: 2rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 2rem;
+        height: 100%;
+    }
+
+    @media (max-width: 400px) {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        max-width: 1200px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin: 1rem;
+        }
+
+        @media (max-width: 400px) {
+            margin: 0;
+        }
+
+        .details-container {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            color: var(--glass-text);
+
+            @media (max-width: 400px) {
+                padding: 0.5rem;
+            }
+
+            h1 {
+                color: var(--accent-blue);
+
+                @media (max-width: 400px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .title-container {
+                display: flex;
+            }
+
+            .description-container {
+                max-height: 300px;
+                text-overflow: ellipsis;
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: var(--accent-blue) var(--glass-bg);
+            }
+
+            .info-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5rem;
+                place-content: center;
+
+                @media (max-width: 400px) {
+                    grid-template-columns: 1fr;
+                }
+
+                .info {
+                    h5 {
+                        color: var(--accent-blue);
+                    }
+                }
+            }
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem;
+            background-color: var(--glass-bg);
+            border-radius: 1rem;
+
+            @media (max-width: 400px) {
+                padding: 0.25rem;
+            }
+
+            .image-container {
+                display: flex;
+                align-items: center;
+                border-radius: 1rem;
+                transition: all 0.3s ease;
+                height: auto;
+                max-width: 100%;
+                justify-content: center;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 1rem;
+                    box-shadow: var(--shadow);
+                    object-fit: cover;
+                }
+            }
+
+            .video-container {
+                display: grid;
+                place-items: center;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+                @media (max-width: 400px) {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}
