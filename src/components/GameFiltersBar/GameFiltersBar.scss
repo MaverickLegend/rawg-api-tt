@@ -1,3 +1,10 @@
+.game-filters-bar {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
     form {
         display: flex;
         flex-flow: row nowrap;
@@ -5,7 +12,8 @@
         padding: 0.5rem;
         background-color: var(--glass-bg);
         border: 1px solid var(--accent-purple);
-        margin-bottom: 1rem;
+        max-width: 1200px;
+        width: 100%;
 
         .input-group {
             display: flex;
@@ -19,6 +27,7 @@
 
         @media (max-width: 1200px) {
             flex-flow: column wrap;
+            max-width: 800px;
 
             .input-group {
                 display: grid;
@@ -41,13 +50,46 @@
             .input-group {
                 max-height: 100px;
                 gap: 0.5rem;
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                padding: 0.5rem;
                 overflow-y: auto;
-                margin: 0.5rem;
+                scrollbar-width: thin;
+                scrollbar-color: var(--accent-blue) var(--glass-bg);
             }
 
             .button-group {
                 gap: 0.5rem;
             }
         }
+
+        @media (max-width: 600px) {
+            .input-group {
+                grid-template-columns: 1fr;
+            }
+        }
     }
+
+    .game-filters {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        .filters-list {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .filter-tag {
+            background-color: var(--accent-blue);
+            color: white;
+            border-radius: 16px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+    }
+}
