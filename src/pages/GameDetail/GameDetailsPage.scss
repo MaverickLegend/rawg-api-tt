@@ -121,12 +121,22 @@
             }
 
             .video-container {
-                display: grid;
-                place-items: center;
-                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                display: flex;
+                align-items: center;
+                border-radius: 1rem;
+                transition: all 0.3s ease;
+                height: auto;
+                max-width: 100%;
+                justify-content: center;
+                overflow: hidden;
 
-                @media (max-width: 400px) {
-                    grid-template-columns: 1fr;
+
+                video {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 1rem;
+                    box-shadow: var(--shadow);
+                    object-fit: cover;
                 }
             }
         }

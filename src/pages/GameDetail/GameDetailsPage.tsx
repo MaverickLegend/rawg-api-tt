@@ -86,12 +86,10 @@ export const GameDetailsPage = () => {
             <img src={gameDetails.background_image} alt={gameDetails.name} />
           </div>
           <div className="video-container">
-            <h2>Trailers</h2>
             {gameTrailers.length > 0 ? (
               <div className="trailers">
                 {gameTrailers.map((trailer) => (
                   <div key={trailer.id}>
-                    <h3>{trailer.name}</h3>
                     <video controls>
                       <source src={trailer.preview} type="video/mp4" />
                       <source src={trailer.data.max} type="video/mp4" />
