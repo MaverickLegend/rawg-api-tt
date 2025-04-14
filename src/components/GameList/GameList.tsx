@@ -20,7 +20,7 @@ export const GameList = () => {
 
   if (loading)
     return (
-      <div className="flex justify-center items-center">
+      <div className="justify-self-center align-self-center  md:p-8 flex items-center justify-center">
         <span className="loading loading-infinity w-20 h-20 "></span>
       </div>
     );

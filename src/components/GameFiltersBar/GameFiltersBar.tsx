@@ -67,7 +67,7 @@ export const GameFiltersBar = () => {
   if (loading) return <Loader className="tiny" />;
 
 return (
-  <div className="animate-fade-in w-full mx-auto p-4 md:p-6 bg-base-100 rounded-box shadow-md">
+  <div className="animate-fade-in animate-fade-out w-full mx-auto p-4 md:p-6 bg-base-100 rounded-box shadow-md">
     <form className="" onSubmit={handleSubmit}>
       {/* Grid responsive  */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
