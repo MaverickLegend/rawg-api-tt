@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { fetchGameDetails, fetchGameTrailers } from "../../api/game-service";
 import { GameDetails, GameTrailer } from "../../interfaces/game-list.interfaces";
 import he from "he";
-import { Loader } from "../../components/common/Loader/Loader";
 
 export const GameDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
