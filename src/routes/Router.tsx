@@ -6,7 +6,7 @@ import { HomePage } from "../pages/Homepage/Homepage";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<HomePage />}/>
       <Route path="/game/:id" element={<GameDetailsPage />} />
     </Routes>
   );

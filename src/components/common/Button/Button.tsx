@@ -1,5 +1,3 @@
-import "./Button.scss";
-
 interface ButtonProps {
   onClick: () => void;
   children: React.ReactNode;

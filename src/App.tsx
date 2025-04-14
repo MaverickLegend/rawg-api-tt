@@ -5,12 +5,14 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Toaster position="top-center" />
-        <Router />
-      </BrowserRouter>
-    </>
+    <div className="min-h-screen bg-gradient-to-br bg-base-200 text-white">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <BrowserRouter>
+          <Toaster position="top-center" />
+          <Router />
+        </BrowserRouter>
+      </div>
+    </div>
   );
 }
 

@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.3",
     "axios": "^1.8.3",
+    "daisyui": "^5.0.19",
     "he": "^1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
     "react-router-dom": "^7.3.0",
     "sass": "^1.85.1",
+    "tailwindcss": "^4.1.3",
     "zustand": "^5.0.3"
   },
   "devDependencies": {

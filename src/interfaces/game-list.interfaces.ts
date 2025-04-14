@@ -14,6 +14,7 @@ interface GameDetails extends Game {
   released: string;
   rating: number;
   rating_top: number;
+  ratings_count: number;
   genres: { name: string }[];
   platforms: { platform: { name: string } }[];
   trailers?: { data: { max: string } }[];

@@ -9,14 +9,14 @@ Este proyecto es una respuesta a una prueba técnica para una posición de desar
 
 ## 🛠️ Librerías Adicionales
 
-| Librería             | Propósito                                                                         |
-| -------------------- | --------------------------------------------------------------------------------- |
-| **Axios**            | Para facilitar las llamadas HTTP con una sintaxis más limpia y funcional.         |
-| **Sass (SCSS)**      | Para aplicar estilos modulares y escalables mediante clases anidadas y variables. |
-| **he**               | Para decodificar entidades HTML en descripciones provenientes de la API.          |
-| **React Hot Toast**  | Para mostrar notificaciones no intrusivas al usuario, mejorando la UX.            |
-| **React Router DOM** | Para manejar la navegación entre vistas en una SPA sin recarga de página.         |
-| **Zustand**          | Para centralizar el uso del estado de filtros y fetch de datos en la aplicación.  |
+| Librería                   | Propósito                                                                        |
+| -------------------------- | -------------------------------------------------------------------------------- |
+| **Axios**                  | Para facilitar las llamadas HTTP con una sintaxis más limpia y funcional.        |
+| **Tailwind CSS + DaisyUI** | Para estilizar la interfaz de usuario de manera rápida y limpiamente.            |
+| **he**                     | Para decodificar entidades HTML en descripciones provenientes de la API.         |
+| **React Hot Toast**        | Para mostrar notificaciones no intrusivas al usuario, mejorando la UX.           |
+| **React Router DOM**       | Para manejar la navegación entre vistas en una SPA sin recarga de página.        |
+| **Zustand**                | Para centralizar el uso del estado de filtros y fetch de datos en la aplicación. |
 
 ## 📂 Estructura del Proyecto
 
@@ -24,7 +24,6 @@ Este proyecto es una respuesta a una prueba técnica para una posición de desar
 - `src/components`: Componentes reutilizables de UI.
 - `src/interfaces`: Interfaces con TypeScript.
 - `src/pages`: Vistas principales de la aplicación.
-- `src/styles`: Estilos globales con Sass.
 
 ## 🧪 Funcionalidad
 
@@ -54,14 +53,14 @@ This project is a response to a technical test for a fullstack developer positio
 
 ## 🛠️ Additional Libraries
 
-| Library              | Purpose                                                                |
-| -------------------- | ---------------------------------------------------------------------- |
-| **Axios**            | Simplifies HTTP requests with a cleaner and more functional syntax.    |
-| **Sass (SCSS)**      | Enables modular, scalable styling using nested classes and variables.  |
-| **he**               | Decodes HTML entities from game descriptions returned by the API.      |
-| **React Hot Toast**  | Displays non-intrusive user notifications to improve UX.               |
-| **React Router DOM** | Handles navigation between views in the SPA without full page reloads. |
-| **Zustand**          | Handles state centralization for filter and fetching data purposes.    |
+| Library                    | Purpose                                                                |
+| -------------------------- | ---------------------------------------------------------------------- |
+| **Axios**                  | Simplifies HTTP requests with a cleaner and more functional syntax.    |
+| **Tailwind CSS + DaisyUI** | For quick and cleanly styling the UI.                                  |
+| **he**                     | Decodes HTML entities from game descriptions returned by the API.      |
+| **React Hot Toast**        | Displays non-intrusive user notifications to improve UX.               |
+| **React Router DOM**       | Handles navigation between views in the SPA without full page reloads. |
+| **Zustand**                | Handles state centralization for filter and fetching data purposes.    |
 
 ## 📂 Project Structure
 

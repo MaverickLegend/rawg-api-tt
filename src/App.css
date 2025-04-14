@@ -1,23 +1,18 @@
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: synthwave, aqua
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
+@layer utilities {
+    .animate-fade-in {
+        @apply opacity-0 animate-[fadeIn_0.4s_ease-out_forwards];
+    }
 
-html,
-body {
-  height: 100%;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(45deg, black 0%, purple 100%) no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
 }

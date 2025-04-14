@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { Button } from "../common/Button/Button";
-import { Loader } from "../common/Loader/Loader";
 import { useGameStore } from "../../store/useGameStore";
 import { useNavigate } from "react-router-dom";
-import "./GameList.scss";
 
 export const GameList = () => {
   const { gameList, loading, error, totalResults, fetchGames, currentPage, setCurrentPage, filters } = useGameStore();
@@ -20,7 +18,12 @@ export const GameList = () => {
   const pageSize = 12;
   const totalPages = Math.ceil(totalResults / pageSize);
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="flex justify-center items-center">
+        <span className="loading loading-infinity w-20 h-20 "></span>
+      </div>
+    );
   if (error)
     return (
       <>
@@ -29,35 +32,43 @@ export const GameList = () => {
       </>
     );
 
-  return (
-    <div className="game-list-container">
-      {/* Renderizar la lista de juegos */}
-      <div className="game-list">
-        {gameList.map((game, indexInPage) => {
-          const index = (currentPage - 1) * pageSize + indexInPage + 1;
-          return (
-            <li key={game.id}>
-              <h5>{index}</h5>
-              <div className="game-info">
-                <h4>{game.name}</h4>
-                <p>Metacritic: {game.metacritic}</p>
-              </div>
-              <Button onClick={() => handleViewDetails(game.id)}>{"Detalles"}</Button>
-            </li>
-          );
-        })}
-      </div>
-
-      {/* Paginación */}
-      <div className="pagination">
-        <Button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
-          {"<"}
-        </Button>
-        <span>{currentPage}</span>
-        <Button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage >= totalPages}>
-          {">"}
-        </Button>
-      </div>
+return (
+  <ul className="animate-fade-in list bg-base-100 rounded-box shadow-md p-4">
+    {/* Grid responsive manteniendo tu estilo */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {gameList.map((game, indexInPage) => {
+        const index = (currentPage - 1) * pageSize + indexInPage + 1;
+        return (
+          <li key={game.id} className="list-row p-3 hover:bg-base-200 rounded-lg transition-colors">
+            <h5 className="text-lg font-medium">{index}</h5>
+            <div className="game-info">
+              <h4 className="text-base font-semibold text-base-content">{game.name}</h4>
+              <p className="text-sm">Metacritic: {game.metacritic}</p>
+            </div>
+            <button className="btn btn-neutral btn-sm" onClick={() => handleViewDetails(game.id)}>
+              Detalles
+            </button>
+          </li>
+        );
+      })}
     </div>
-  );
+
+    {/* Paginación igual pero centrada */}
+    <div className="join mx-auto p-3 gap-2 mt-4">
+      <button
+        className="join-item btn btn-soft btn-primary"
+        onClick={() => setCurrentPage(currentPage - 1)}
+        disabled={currentPage === 1}>
+        {"<"}
+      </button>
+      <span className="join-item btn btn-active btn-primary">{currentPage}</span>
+      <button
+        className="join-item btn btn-soft btn-primary"
+        onClick={() => setCurrentPage(currentPage + 1)}
+        disabled={currentPage >= totalPages}>
+        {">"}
+      </button>
+    </div>
+  </ul>
+);
 };
